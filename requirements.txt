@@ -3,6 +3,7 @@ langgraph
 langchain-groq
 langchain-tavily
 
+langchain-core
 beautifulsoup4
 requests
 python-dotenv
