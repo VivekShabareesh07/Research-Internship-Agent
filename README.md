@@ -68,11 +68,43 @@ TAVILY_API_KEY=your_tavily_api_key
 GROQ_API_KEY=your_groq_api_key
 ```
 
-## Run
+## Gmail MCP Setup (Required)
+
+This project uses the Gmail MCP server to send emails.
+
+### Step 1: Install Node.js
+
+Download and install Node.js from https://nodejs.org.
+
+### Step 2: Create Google OAuth Credentials
+
+- Create a Google Cloud project.
+- Enable the **Gmail API**.
+- Go to **APIs & Services → Credentials**.
+- Create an **OAuth 2.0 Client ID** (Desktop App).
+- Download the credentials file and rename it to:
+
+```text
+gcp-oauth.keys.json
+```
+
+### Step 3: Authenticate (One-Time Setup)
+
+```bash
+mkdir -p ~/.gmail-mcp
+mv gcp-oauth.keys.json ~/.gmail-mcp/
+npx @gongrzhe/server-gmail-autoauth-mcp auth
+```
+
+Complete the Google sign-in in your browser. This only needs to be done once.
+
+After authentication, simply run:
 
 ```bash
 python main.py
 ```
+
+The project will automatically connect to the Gmail MCP server and use your authenticated Gmail account to send emails.
 
 Follow the prompts to enter your profile. The agent will:
 
