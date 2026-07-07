@@ -118,7 +118,7 @@ Follow the prompts to enter your profile. The agent will:
 - Python
 - LangGraph
 - LangChain
-- Google Gemini
+- Gmail MCP (Model Context Protocol)
 - Groq
 - Tavily Search
 - BeautifulSoup
