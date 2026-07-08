@@ -224,6 +224,16 @@ Do not output markdown.
 
 Your entire response must be a single valid JSON object and nothing else.
 
+Return ONLY valid JSON.
+
+The value of "body" MUST be a valid JSON string.
+
+Escape every newline as \\n.
+
+Do NOT output multiline strings.
+
+Do NOT output any explanation.
+
 Output exactly in this format:
 
 {{
